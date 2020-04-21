@@ -122,6 +122,7 @@
             "www.github.com/BuaaRedSun/docs"
         ],
         "cid": "BH000001",
+        "course_name": "软件工程",
         "ddl": {
             "ddl_id": 13,
             "ddl_time": {
