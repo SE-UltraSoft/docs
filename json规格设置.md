@@ -105,8 +105,8 @@
 ```
 
 ## /api/user/:uid/task/:tid 创建和修改的传输粒度
+### 查询返回json
 ```json
-// 成功查询返回
 {
     "success": true,
     "message": "Success.",
@@ -140,14 +140,53 @@
         "is_finished": false
     }
 } 
-
+```
 
 //不存在的task和不属于自己的task的情况
+```json
 {
     "success": false, 
     "message": "Task not exists."
 }
 ```
+
+### 创建和修改回传json
+```json
+{
+    "uid": 1,
+    "operation": "create / update", 
+    "data": { //这里的data是单个task
+        "tid": 27,
+        "title": "团队博客——功能规格",
+        "category": "homework",
+        "content": "这是一篇团队博客",
+        "useful_urls": [
+            "www.edu.cnblogs.com/xxxxx",
+            "www.github.com/BuaaRedSun/docs"
+        ],
+        "platform": "博客园",
+        "cid": "1",
+        "course_name": "软件工程",
+        "ddl": {
+            "ddl_id": 13,
+            "ddl_time": "2020-04-10 23:55:00",
+                "notification_alert": false,
+            "notification_time": "2020-04-09 23:55:00",
+            "notification_repeat": null,
+            "notification_content": "交作业啦"                
+        },
+        "created_at": "2020-03-20 15:33:20",
+        "participant": [ //单个task时内嵌到data内部
+            "17373001",
+            "17373002",
+            "17373003"
+        ],
+        "is_finished": false
+    }
+} 
+```
+
+
 
 ## /api/user/:uid/tasks
 ```json
