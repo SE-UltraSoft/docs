@@ -81,22 +81,20 @@
 ```json
 // 成功查询返回
 {
+    "code":200,
     "success": true,
     "message": "Success.",
     "uid": 1,
     "data": [ //这里的data是学生选课course的集合
         {
-            "cid": "BH000001",
             "course_name": "软件工程",
             "is_admin": false
         },
         {
-            "cid": "BH000002",
             "course_name": "工科数学分析",
             "is_admin": true // 表示课程负责人
         },
         {
-            "cid": "BH000003",
             "course_name": "高级算法分析",
             "is_admin": false
         }
